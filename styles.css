@@ -52,6 +52,54 @@ header {
 .nav-links li a:hover {
     color: #ff4d6d;
 }
+
+/* Quitar los puntos de la lista y márgenes */
+nav ul {
+    list-style-type: none; /* Quita los puntos */
+    margin: 0;
+    padding: 0;
+}
+
+/* Alinear los links horizontalmente */
+nav ul li {
+    display: inline-block; /* Los pone uno al lado del otro */
+    margin-left: 2rem;     /* Espacio entre ellos */
+}
+
+/* Estilo general de los enlaces */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4d6d;
+}
+
+main{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5; /* Gris claro elegante */
+    color: #111;
+}
+
+
+footer{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Logo izquierda / menú derecha */
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+
 /* Responsivo */
 @media (max-width: 768px) {
     header {
