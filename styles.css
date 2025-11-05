@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Logo izquierda / menú derecha */
+    align-items: center;
+    padding: 1rem 3rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.title{
+    font-size:1.8rem;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#ff4d6d;
+}
+
+/* Navegación */
+.nav-links {
+    list-style: none;   /* ❌ Quita los puntos de la lista */
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    list-style: none;
+}
+
+.nav-links li a:hover {
+    color: #ff4d6d;
+}
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+    }
+}
