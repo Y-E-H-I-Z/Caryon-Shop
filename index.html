@@ -1,51 +1,78 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caryon Shop: tu tienda virtual con productos de calidad y atención personalizada.">
+    <meta name="keywords" content="tienda virtual, ecommerce, Caryon Shop, productos online, compras">
+    <meta name="author" content="Caryon Shop">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Caryon Shop</title>
 </head>
+
+<body>
     <header>
-        <h1 class="title">Caryon Shop</h1>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="title">Caryon Shop</h1>
+            <nav class="nav-links" aria-label="Menú principal">
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#products">Productos</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section id="home">
-            <h2>Bienvenidos a Caryon Shop</h2>
-            <p>¡La mejor tienda virtual que encontrarás!</p>
+        <!-- Sección de inicio -->
+        <section id="home" class="section">
+            <div class="container">
+                <h2>Bienvenidos a Caryon Shop</h2>
+                <p>¡La mejor tienda virtual que encontrarás! Descubre productos seleccionados para ti con envíos rápidos y seguros.</p>
+                <a href="#products" class="btn">Explorar Productos</a>
+            </div>
         </section>
-        <section id="products">
-            <h2>Nuestros Productos</h2>
-            <ul>
-                <li>Producto 1</li>
-                <li>Producto 2</li>
-                <li>Producto 3</li>
-            </ul>
-        </section>          
+
+        <!-- Sección de productos -->
+        <section id="products" class="section">
+            <div class="container">
+                <h2>Nuestros Productos</h2>
+                <ul class="product-list">
+                    <li class="product-item">Producto 1</li>
+                    <li class="product-item">Producto 2</li>
+                    <li class="product-item">Producto 3</li>
+                </ul>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <section id="about">
-            <h2 class="title">About Us</h2>
-            <p>Caryon Shop has been serving customers since 2025 with quality products and excellent service.</p>
-        </section>
-        <section id="contact">
-            <h2 class="title">Contáctanos</h2>
-            <p>Correo:
-                <a href="mailto:carrionq.franco28@gmail.com">carrionq.franco28@gmail.com</a>
-            </p>
-            <p>WhatsApp:
-                <a href="https://wa.me/964774417?text=¡Hola%21">¡Habla con nosotros!</a>
-            </p>
-        </section> 
+        <div class="container footer-content">
+            <!-- Sección Sobre Nosotros -->
+            <section id="about" class="footer-section">
+                <h2 class="title">About Us</h2>
+                <p>Caryon Shop ha estado sirviendo a clientes desde 2025 con productos de calidad y un excelente servicio.</p>
+            </section>
+
+            <!-- Sección de Contacto -->
+            <section id="contact" class="footer-section">
+                <h2 class="title">Contáctanos</h2>
+                <p><strong>Correo:</strong>
+                    <a href="mailto:carrionq.franco28@gmail.com">carrionq.franco28@gmail.com</a>
+                </p>
+                <p><strong>WhatsApp:</strong>
+                    <a href="https://wa.me/964774417?text=¡Hola%21" target="_blank" rel="noopener noreferrer">¡Habla con nosotros!</a>
+                </p>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Caryon Shop. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <script href="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
