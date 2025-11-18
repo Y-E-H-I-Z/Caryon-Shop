@@ -1,22 +1,20 @@
 const multer = require("multer");
+const path = require("path");
 
-// Guardar archivos en /tmp (Cloudinary los procesa desde ahí)
+// Carpeta temporal para subir archivos
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "/tmp");
-  },
+  destination: (req, file, cb) => cb(null, "uploads/"), // crea esta carpeta si no existe
   filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname);
-  }
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
 });
 
-// Validar que solo sean imágenes
+// Filtro para aceptar solo imágenes
 const fileFilter = (req, file, cb) => {
-  if (file.mimetype.startsWith("image/")) {
-    cb(null, true);
-  } else {
-    cb(new Error("Solo se permiten imágenes"), false);
-  }
+  const allowedTypes = /jpeg|jpg|png|webp/;
+  const ext = path.extname(file.originalname).toLowerCase();
+  if (allowedTypes.test(ext)) cb(null, true);
+  else cb(new Error("Solo se permiten imágenes"));
 };
 
 module.exports = multer({ storage, fileFilter });

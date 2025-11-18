@@ -1,5 +1,4 @@
 const Product = require("../models/Product");
-const cloudinary = require("../config/cloudinary");
 
 // Crear producto (ADMIN)
 exports.createProduct = async (req, res) => {
@@ -10,11 +9,6 @@ exports.createProduct = async (req, res) => {
       return res.status(400).json({ message: "La imagen es obligatoria" });
     }
 
-    // Subir imagen a Cloudinary
-    const upload = await cloudinary.uploader.upload(req.file.path, {
-      folder: "caryon_shop/products",
-    });
-
     const product = await Product.create({
       name,
       description,
@@ -22,7 +16,7 @@ exports.createProduct = async (req, res) => {
       category,
       stock,
       sizes: sizes ? JSON.parse(sizes) : [],
-      image: upload.secure_url,
+      image: req.file.path, // Guardamos la ruta local del archivo
     });
 
     res.status(201).json({
@@ -64,11 +58,7 @@ exports.updateProduct = async (req, res) => {
 
     // Si el admin sube nueva imagen
     if (req.file) {
-      const upload = await cloudinary.uploader.upload(req.file.path, {
-        folder: "caryon_shop/products",
-      });
-
-      updateData.image = upload.secure_url;
+      updateData.image = req.file.path;
     }
 
     if (updateData.sizes) {
