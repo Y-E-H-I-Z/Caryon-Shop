@@ -1,4 +1,4 @@
-/* 🔄 Reset básico */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 🎯 Utilidades generales */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,36 +24,34 @@ body {
     text-align: center;
 }
 
+/* BOTONES */
 .btn {
     display: inline-block;
     background-color: #ff4d6d;
     color: #fff;
-    text-decoration: none;
     padding: 0.8rem 1.8rem;
     border-radius: 30px;
     font-weight: 600;
+    text-decoration: none;
     margin-top: 1rem;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: 0.3s ease;
 }
-
 .btn:hover {
     background-color: #e63b5c;
     transform: scale(1.05);
 }
 
-/* 🔝 HEADER */
+/* HEADER */
 header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
     background-color: #111;
     color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,86 +59,80 @@ header .container {
 
 .title {
     font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
     color: #ff4d6d;
 }
 
-/* 🧭 Navegación */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+/* MENÚ */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.nav-links li a {
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+.nav-links a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
-
-.nav-links li a:hover {
+.nav-links a:hover {
     color: #ff4d6d;
 }
 
-/* 🏠 Sección Home */
-#home {
+/* HOME */
+.home-section {
     background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
-    color: #fff;
+    color: white;
     padding: 6rem 2rem;
 }
-
-#home h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+.home-section h2 {
+    font-size: 2.3rem;
 }
-
-#home p {
-    font-size: 1.1rem;
+.home-section p {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0.5rem auto;
 }
 
-/* 🛍️ Productos */
-#products {
-    background-color: #fff;
+/* PRODUCTOS */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-#products h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #111;
-}
-
-.product-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 0;
-}
-
-.product-item {
-    background: #f5f5f5;
+.product-card {
+    background: white;
     padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.product-card img {
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 250px;
+}
+.price {
+    color: #ff4d6d;
+    font-weight: 700;
 }
 
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-}
-
-/* 🦶 Footer */
+/* FOOTER */
 footer {
     background-color: #111;
-    color: #fff;
-    padding: 2rem 0 1rem;
+    color: white;
+    padding: 2rem 0;
     text-align: center;
 }
 
@@ -151,54 +142,38 @@ footer {
     flex-wrap: wrap;
     gap: 2rem;
 }
-
 .footer-section {
     flex: 1 1 300px;
 }
-
 .footer-section h2 {
     color: #ff4d6d;
-    margin-bottom: 1rem;
 }
-
 .footer-section a {
     color: #ff758f;
     text-decoration: none;
 }
-
-.footer-section a:hover {
-    text-decoration: underline;
-}
-
 .footer-bottom {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 1rem;
-    opacity: 0.8;
+    margin-top: 1.5rem;
+    opacity: 0.7;
 }
 
-/* 📱 Responsivo */
+/* 📱 RESPONSIVE */
 @media (max-width: 900px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
+    /* Header responsivo */
+    .hamburger {
+        display: block;
     }
 
     .nav-links {
-        flex-direction: column;
+        display: none;
         width: 100%;
-        gap: 1rem;
         margin-top: 1rem;
     }
-
-    .nav-links li a {
+    .nav-links.active {
         display: block;
-        width: 100%;
     }
-
-    .footer-content {
+    .nav-links ul {
         flex-direction: column;
-        text-align: left;
+        gap: 1rem;
     }
 }
