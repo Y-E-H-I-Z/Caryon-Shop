@@ -9,7 +9,7 @@ const {
 } = require("../controllers/productController");
 
 const { verifyToken, verifyAdmin } = require("../middleware/authMiddleware");
-const upload = require("../middleware/multer");
+const upload = require("../middleware/multerConfig");
 
 // RUTAS PÚBLICAS
 router.get("/", getProducts);

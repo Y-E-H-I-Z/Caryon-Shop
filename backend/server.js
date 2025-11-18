@@ -6,7 +6,6 @@ const cors = require("cors");
 // Importar rutas
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
-const adminRoutes = require("./routes/adminRoutes");
 
 const app = express();
 
@@ -17,7 +16,6 @@ app.use(express.json());
 // Registrar rutas
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
-app.use("/api/admin", adminRoutes);
 
 // Conexión a MongoDB
 mongoose
