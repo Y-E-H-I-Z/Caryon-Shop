@@ -8,7 +8,7 @@ const {
   deleteProduct,
 } = require("../controllers/productController");
 
-const { verifyToken, verifyAdmin } = require("../middleware/auth");
+const { verifyToken, verifyAdmin } = require("../middleware/authMiddleware");
 const upload = require("../middleware/multer");
 
 // RUTAS PÚBLICAS
