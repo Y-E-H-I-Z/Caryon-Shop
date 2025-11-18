@@ -3,99 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Caryon Shop: tu tienda virtual con productos de calidad.">
-    <meta name="keywords" content="tienda virtual, ecommerce, ropa, Caryon Shop">
-    <meta name="author" content="Caryon Shop">
-
+    <title>Caryon Shop</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
-    
-    <title>Caryon Shop</title>
 </head>
-
 <body>
+    <!-- HEADER -->
     <header>
         <div class="container header-container">
-            <h1 class="title">Caryon Shop</h1>
+            <a href="#home" class="title">Caryon Shop</a>
 
-            <!-- Botón hamburguesa -->
-            <button id="menu-toggle" aria-label="Abrir menú" class="hamburger">
-                ☰
-            </button>
+            <button id="menu-toggle" aria-label="Abrir menú" class="hamburger">☰</button>
 
-            <nav id="nav-menu" class="nav-links" aria-label="Menú principal">
+            <nav id="nav-menu" class="nav-links">
                 <ul>
-                    <li><a href="#home">Inicio</a></li>
                     <li><a href="#products">Productos</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#contact">Contáctanos</a></li>
+                    <li><a href="login.html" class="btn-header">Iniciar Sesión</a></li>
+                    <li><a href="register.html" class="btn-header">Registrarse</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- HOME -->
-        <section id="home" class="section home-section">
-            <div class="container">
+    <!-- HOME -->
+    <section id="home" class="home-section">
+        <div class="container home-container">
+            <div class="home-text">
                 <h2>Bienvenidos a Caryon Shop</h2>
-                <p>Productos seleccionados para ti. Envíos rápidos y atención personalizada.</p>
+                <p>Descubre nuestros productos seleccionados para ti. Disfruta de envíos rápidos y atención personalizada.</p>
                 <a href="#products" class="btn">Ver Productos</a>
             </div>
-        </section>
+            <div class="home-image">
+                <img src="img/home-banner.jpg" alt="Banner Caryon Shop">
+            </div>
+        </div>
+    </section>
 
-        <!-- PRODUCTOS -->
-        <section id="products" class="section">
-            <div class="container">
-                <h2>Nuestros Productos</h2>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="img/product1.jpg" alt="Producto 1">
+    <!-- PRODUCTOS -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="img/product1.jpg" alt="Producto 1">
+                    <div class="product-info">
                         <h3>Producto 1</h3>
                         <p class="price">$39.90</p>
                         <p>Tallas: S, M, L</p>
+                        <a href="login.html" class="btn">Comprar</a>
                     </div>
-
-                    <div class="product-card">
-                        <img src="img/product2.jpg" alt="Producto 2">
+                </div>
+                <div class="product-card">
+                    <img src="img/product2.jpg" alt="Producto 2">
+                    <div class="product-info">
                         <h3>Producto 2</h3>
                         <p class="price">$45.00</p>
                         <p>Tallas: M, L, XL</p>
+                        <a href="login.html" class="btn">Comprar</a>
                     </div>
-
-                    <div class="product-card">
-                        <img src="img/product3.jpg" alt="Producto 3">
+                </div>
+                <div class="product-card">
+                    <img src="img/product3.jpg" alt="Producto 3">
+                    <div class="product-info">
                         <h3>Producto 3</h3>
                         <p class="price">$29.99</p>
                         <p>Tallas: S, M</p>
+                        <a href="login.html" class="btn">Comprar</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna consulta? Escríbenos y te responderemos a la brevedad.</p>
+            <p><strong>Correo:</strong> <a href="mailto:carrionq.franco28@gmail.com">carrionq.franco28@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/964774417?text=Hola" target="_blank">¡Háblanos!</a></p>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
-        <div class="container footer-content">
-            <section id="about" class="footer-section">
-                <h2>Sobre Nosotros</h2>
-                <p>Caryon Shop te ofrece calidad, estilo y envíos seguros desde 2025.</p>
-            </section>
-
-            <section id="contact" class="footer-section">
-                <h2>Contacto</h2>
-                <p>
-                    <strong>Correo:</strong>
-                    <a href="mailto:carrionq.franco28@gmail.com">carrionq.franco28@gmail.com</a>
-                </p>
-                <p>
-                    <strong>WhatsApp:</strong>
-                    <a href="https://wa.me/964774417?text=Hola" target="_blank">¡Háblanos!</a>
-                </p>
-            </section>
-        </div>
-
         <div class="footer-bottom">
             <p>&copy; 2025 Caryon Shop. Todos los derechos reservados.</p>
         </div>
